@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<!-- THIS IS A COMMENT -->
+<title>nickspredemann.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.tt { font-family:monospace }
+.example { font-family:monospace; white-space:pre; overflow-x:auto; }
+</style>
+</head>
+
+<body style="width:100%; max-width:720px">
+
+<h2>Welcome to nickspredemann.com!</h2>
+
+<p>
+
+
+<br>
+<br>
+<br>
+<i>"That's what."</i>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-She
+</p>
+
+</html>
+<!-- close the <html> begun above -->

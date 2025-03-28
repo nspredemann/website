@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Nick Spredemann</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #DDDDEE;
+}
+
+
+/* Style the header */
+header {
+  background-image: url("images/ns0.png");
+  background-color: #4472c4;
+  width: 100%;
+  height: 47px;
+  background-size: contain;
+  background-position: center left; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  padding: 0px;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 13%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #DDDDEE;
+  padding: 10px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 10px;
+  width: 70%;
+  background-color: #f1f1f1;
+ /* height: 800px; /* only for demonstration, should be removed */*/
+}
+
+h1 {
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.2em;
+}
+
+h2 {
+  text-align: center;
+  line-height: 1.2em;
+  font-size: 2em;
+  color: green;
+}
+
+h2 span {
+  color: red;
+}
+
+h2 strong {
+  font-weight: bold;
+  color: black;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 2em;
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #4472c4;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+<a href="http://www.nickspredemann.com">
+    <header>
+      <h2>
+      </h2>
+    </header>
+</a>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="http://www.nickspredemann.com/box2d_games/bouncing_ninja_ball.html">Bouncing Ninja Ball</a></li>
+      <li><a href="http://www.nickspredemann.com/box2d_games/flappy_ball.html">Flappy Ball</a></li>
+      <li><a href="#">Contact Me</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <br>
+    <br>
+    <br>
+    <h1>Under Construction</h1>
+    <img class="jackhammer" src='images/jackhammer.gif' alt="Stick figure in a santa hat using a jackhammer." />
+    <h2><strong>Coming</strong> <span>C</span>h<span>r</span>i<span>s</span>t<span>m</span>a<span>s</span>&nbsp;2<span>0</span>0<span>2</span>!</h2>
+  </article>
+</section>
+
+<footer>
+  <p>(C)opyright, <a href="#" class="cpr">Nicholas Spredemann</a>.<br>
+Continued use of this site indicates your agreement to the <a href="http://www.nickspredemann.com/conditions.html" class="cpr">Conditions of use</a> and  <a href=http://www.nickspredemann.com/privacy.html class="cpr">Privacy Policy</a>.</p>
+</footer>
+
+</body>
+</html>

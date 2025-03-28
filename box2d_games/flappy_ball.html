@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Nick Spredemann</title><!-- libs -->
+	<!--[if IE]><script type="text/javascript" src="lib/excanvas.js"></script><![endif]-->
+<script src="lib/prototype-1.6.0.2.js"></script>
+
+	<!-- box2djs -->
+<script src='js/box2d/common/b2Settings.js'></script>
+<script src='js/box2d/common/math/b2Vec2.js'></script>
+<script src='js/box2d/common/math/b2Mat22.js'></script>
+<script src='js/box2d/common/math/b2Math.js'></script>
+<script src='js/box2d/collision/b2AABB.js'></script>
+<script src='js/box2d/collision/b2Bound.js'></script>
+<script src='js/box2d/collision/b2BoundValues.js'></script>
+<script src='js/box2d/collision/b2Pair.js'></script>
+<script src='js/box2d/collision/b2PairCallback.js'></script>
+<script src='js/box2d/collision/b2BufferedPair.js'></script>
+<script src='js/box2d/collision/b2PairManager.js'></script>
+<script src='js/box2d/collision/b2BroadPhase.js'></script>
+<script src='js/box2d/collision/b2Collision.js'></script>
+<script src='js/box2d/collision/Features.js'></script>
+<script src='js/box2d/collision/b2ContactID.js'></script>
+<script src='js/box2d/collision/b2ContactPoint.js'></script>
+<script src='js/box2d/collision/b2Distance.js'></script>
+<script src='js/box2d/collision/b2Manifold.js'></script>
+<script src='js/box2d/collision/b2OBB.js'></script>
+<script src='js/box2d/collision/b2Proxy.js'></script>
+<script src='js/box2d/collision/ClipVertex.js'></script>
+<script src='js/box2d/collision/shapes/b2Shape.js'></script>
+<script src='js/box2d/collision/shapes/b2ShapeDef.js'></script>
+<script src='js/box2d/collision/shapes/b2BoxDef.js'></script>
+<script src='js/box2d/collision/shapes/b2CircleDef.js'></script>
+<script src='js/box2d/collision/shapes/b2CircleShape.js'></script>
+<script src='js/box2d/collision/shapes/b2MassData.js'></script>
+<script src='js/box2d/collision/shapes/b2PolyDef.js'></script>
+<script src='js/box2d/collision/shapes/b2PolyShape.js'></script>
+<script src='js/box2d/dynamics/b2Body.js'></script>
+<script src='js/box2d/dynamics/b2BodyDef.js'></script>
+<script src='js/box2d/dynamics/b2CollisionFilter.js'></script>
+<script src='js/box2d/dynamics/b2Island.js'></script>
+<script src='js/box2d/dynamics/b2TimeStep.js'></script>
+<script src='js/box2d/dynamics/contacts/b2ContactNode.js'></script>
+<script src='js/box2d/dynamics/contacts/b2Contact.js'></script>
+<script src='js/box2d/dynamics/contacts/b2ContactConstraint.js'></script>
+<script src='js/box2d/dynamics/contacts/b2ContactConstraintPoint.js'></script>
+<script src='js/box2d/dynamics/contacts/b2ContactRegister.js'></script>
+<script src='js/box2d/dynamics/contacts/b2ContactSolver.js'></script>
+<script src='js/box2d/dynamics/contacts/b2CircleContact.js'></script>
+<script src='js/box2d/dynamics/contacts/b2Conservative.js'></script>
+<script src='js/box2d/dynamics/contacts/b2NullContact.js'></script>
+<script src='js/box2d/dynamics/contacts/b2PolyAndCircleContact.js'></script>
+<script src='js/box2d/dynamics/contacts/b2PolyContact.js'></script>
+<script src='js/box2d/dynamics/b2ContactManager.js'></script>
+<script src='js/box2d/dynamics/b2World.js'></script>
+<script src='js/box2d/dynamics/b2WorldListener.js'></script>
+<script src='js/box2d/dynamics/joints/b2JointNode.js'></script>
+<script src='js/box2d/dynamics/joints/b2Joint.js'></script>
+<script src='js/box2d/dynamics/joints/b2JointDef.js'></script>
+<script src='js/box2d/dynamics/joints/b2DistanceJoint.js'></script>
+<script src='js/box2d/dynamics/joints/b2DistanceJointDef.js'></script>
+<script src='js/box2d/dynamics/joints/b2Jacobian.js'></script>
+<script src='js/box2d/dynamics/joints/b2GearJoint.js'></script>
+<script src='js/box2d/dynamics/joints/b2GearJointDef.js'></script>
+<script src='js/box2d/dynamics/joints/b2MouseJoint.js'></script>
+<script src='js/box2d/dynamics/joints/b2MouseJointDef.js'></script>
+<script src='js/box2d/dynamics/joints/b2PrismaticJoint.js'></script>
+<script src='js/box2d/dynamics/joints/b2PrismaticJointDef.js'></script>
+<script src='js/box2d/dynamics/joints/b2PulleyJoint.js'></script>
+<script src='js/box2d/dynamics/joints/b2PulleyJointDef.js'></script>
+<script src='js/box2d/dynamics/joints/b2RevoluteJoint.js'></script>
+<script src='js/box2d/dynamics/joints/b2RevoluteJointDef.js'></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #DDDDEE;
+}
+
+/* Style the header */
+header {
+  background-image: url("../images/ns0.png");
+  background-color: #4472c4;
+  width: 100%;
+  height: 47px;
+  background-size: contain;
+  background-position: center left; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  padding: 0px;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 13%;
+  background: #DDDDEE;
+  padding: 10px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 10px;
+  width: 70%;
+  background-color: #f1f1f1;
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #4472c4;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<a href="http://www.nickspredemann.com">
+    <header>
+      <h2>
+      </h2>
+    </header>
+</a>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="http://www.nickspredemann.com">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="http://www.nickspredemann.com/box2d_games/bouncing_ninja_ball.html">Bouncing Ninja Ball</a></li>
+      <li><a href="http://www.nickspredemann.com/box2d_games/flappy_ball.html">Flappy Ball</a></li>
+      <li><a href="#">Contact Me</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <script src='js/box2dutils.js'></script> 
+    <script src='js/game_flappy_ball.js'></script>
+    <canvas id="game" width='600' height='400'></canvas>
+    <div style="display:none;">
+      <img id="die_img"
+           src="flappy_ball_die.png"
+           width="49" height="59">
+    </div>
+    <br>
+    <br>
+    <h2>
+        <u>Top Scores</u>
+        
+    </h2>
+    <ol>
+      <li>Michael Rahm (65)</li>
+      <li>Dan Johnson (54)</li>
+      <li>Toby Cossairt (49)</li>
+    </ol> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <em>Special thanks to Michael Rahm for game quality testing, Dan Johnson for game debugging, and Matthew Keller for security analysis.</em>
+  </article>
+</section>
+
+<footer>
+  <p>(C)opyright, <a href="#" class="cpr">Nicholas Spredemann</a>.<br>
+Continued use of this site indicates your agreement to the <a href="http://www.nickspredemann.com/conditions.html" class="cpr">Conditions of use</a> and  <a href="http://www.nickspredemann.com/privacy.html" class="cpr">Privacy Policy</a>.</p>
+</footer>
+
+</body>
+</html>

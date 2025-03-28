@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Nick Spredemann</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:  #DDDDEE;
+}
+
+/* Style the header */
+header {
+  background-image: url("images/ns0.png");
+  background-color: #4472c4;
+  width: 100%;
+  height: 47px;
+  background-size: contain;
+  background-position: center left; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  padding: 0px;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 13%;
+  background: #DDDDEE;
+  padding: 10px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 10px;
+  width: 70%;
+  background-color: #f1f1f1;
+  /*height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #4472c4;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+    
+<a href="http://www.nickspredemann.com">
+    <header>
+      <h2>
+      </h2>
+    </header>
+</a>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="http://www.nickspredemann.com">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="http://www.nickspredemann.com/box2d_games/bouncing_ninja_ball.html">Bouncing Ninja Ball</a></li>
+      <li><a href="http://www.nickspredemann.com/box2d_games/flappy_ball.html">Flappy Ball</a></li>
+      <li><a href="#">Contact Me</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <center>
+        <h1>Privacy Agreement</h1>
+    </center>
+    
+    <h2>Information Collected</h2>
+    It is possible that, by using this web site, you may provide personal or identifying information. This includes
+    <ul>
+    <li>Information that you provide on forms
+    <li>Information that is gathered by the web server. This includes your IP address, time of access, the operating system and web browser that you are using, and sometimes the address of the previous page that you visited.
+    <li>CGI scripts may additonally gain and store identifying data (such as your IP address) as a security measure.
+    <li>"Cookies" may also be used to make the site more "user friendly", but it is not necessary for your browser to accept these in order to access most parts of this site.
+    </ul>
+    No other information is knowingly collected.<br><br>
+    
+    <h2>Use of Information</h2>
+    The information described will be used for the following purposes ONLY:
+    <ul>
+    <li>Information that you explicitly provide on forms will only be used for the purpose that is described on that form. 
+    <li>Personal information (names, email addresses, etc) will not be "harvested", sold, published, or used for any purpose other than those that are described in this agreement or on the corresponding forms.
+    <li>Names and email addresses may be used to contact you if I need to follow up something that you sent, or to provide a one-off courtesy reply.
+    <li>Information collected may additionally be provided to relevant authorities for the purposes of law enforcement.
+    <li>Data gathered by the web server may be used for statistical purposes, to optimise the site to suit the majority of visitors.
+    </ul>
+    
+    <h2>Agreement</h2>
+    By continuing to use this site, you demonstrate your acceptance of this privacy policy.
+  </article>
+</section>
+
+<footer>
+  <p>(C)opyright, <a href="#" class="cpr">Nicholas Spredemann</a>.<br>
+Continued use of this site indicates your agreement to the <a href="http://www.nickspredemann.com/conditions.html" class="cpr">Conditions of use</a> and  <a href="http://www.nickspredemann.com/privacy.html" class="cpr">Privacy Policy</a>.</p>
+</footer>
+
+</body>
+</html>
